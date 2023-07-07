@@ -139,7 +139,7 @@ console.log(items)
 
   var text ="Order Details: " + itemdata + " Totalprice:" + finalDollars + "$ and " + finalCents + " cents"
   
-  var whatsappLink = "https://wa.me/918144947243?text="+text
+  var whatsappLink = "https://wa.me/919965080961?text="+text
 
   window.open(whatsappLink, " _blank")
 
