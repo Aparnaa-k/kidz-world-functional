@@ -122,21 +122,25 @@ function updatePrice() {
 
 
 cartButton.onclick = () => {
+  whatsappData();
+  
+};
+
+
+function whatsappData() {
   updatePrice();
-
-
+  var itemdata = ""
   for (let index = 0; index < items.length; index++) {
     if (items[index].quantity != 0) {
-      console.log(
-        "Item name: " +
-          items[index].name +
-          " - Quantity: " +
-          items[index].quantity
-      );
+      itemdata+= items[index].name +" "+ items[index].quantity + " "
     }
   }
+console.log(items)
 
-  console.log(
-    "The total amount is " + finalDollars + "$ and " + finalCents + " cents"
-  );
+  var text ="Order Details: " + itemdata + " Totalprice:" + finalDollars + "$ and " + finalCents + " cents"
+  
+  var whatsappLink = "https://wa.me/918144947243?text="+text
+
+  window.open(whatsappLink, " _blank")
+
 };
